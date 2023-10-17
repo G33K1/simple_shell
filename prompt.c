@@ -1,9 +1,12 @@
 #include "shell.h"
 
 /**
- * main - the main part of the program
+ * main - Entry point
  *
- * return: always 0
+ * Description: parameters passed to main
+ * @void: the return from main
+ *
+ * Return: always 0 (Success)
  */
 
 int main(void)
@@ -18,7 +21,6 @@ int main(void)
 		printf("%s", prompt);
 		newline = getline(&lineptr, &n, stdin);
 		printf("%s\n", lineptr);
-		
 		if (newline == -1)
 		{
 			printf("Exiting.....\n");
