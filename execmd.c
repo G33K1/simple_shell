@@ -20,11 +20,16 @@ void execmd(char **argv)
 		{
 			command = argv[0];
 
-			if (execve(command, argv, NULL) == -1)
+			if (argv[1] == NULL)
 			{
-				perror("Error:");
-				exit(EXIT_FAILURE);
+				if (execve(command, argv, NULL) == -1)
+				{
+					perror("Error:");
+					exit(EXIT_FAILURE);
+				}
 			}
+			else
+				perror("Error: NO such file or directory");
 		}
 	}
 	else

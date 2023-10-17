@@ -29,6 +29,7 @@ int main(void)
 		{
 			printf("Exiting.....\n");
 			return (-1);
+			break;
 		}
 		lineptr_cpy = malloc(sizeof(char) * newline);
 		strcpy(lineptr_cpy, lineptr);
